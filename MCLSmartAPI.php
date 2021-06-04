@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-include_once dirname(__FILE__).'/MCLSmartAPIConnection.php';
-include_once dirname(__FILE__).'/Interfaces/BaseServiceInterface.php';
-include_once dirname(__FILE__).'/Services/ConsumerCreditReport.php';
-include_once dirname(__FILE__).'/Config/Config.php';
+include_once __DIR__.'/MCLSmartAPIConnection.php';
+include_once __DIR__.'/Interfaces/BaseServiceInterface.php';
+include_once __DIR__.'/Services/ConsumerCreditReport.php';
+include_once __DIR__.'/Config/Config.php';
 
-// developed BY: Ali Raza :raza_997@hotmail.com 
+// developed BY: Ali Raza
 
 class MCLSmartAPI implements BaseServiceInterface {
 

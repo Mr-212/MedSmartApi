@@ -1,7 +1,7 @@
 <?php
 
-include_once dirname(__FILE__).'/../Constants/OrderTypeConstants.php';
-include_once dirname(__FILE__).'/../Config/Config.php';
+include_once __DIR__.'/../Constants/OrderTypeConstants.php';
+include_once __DIR__.'/../Config/Config.php';
 
 abstract class BaseService {
     private $productServiceType, $xmlRequestFileDir,$orderType, $config;

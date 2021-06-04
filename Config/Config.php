@@ -16,7 +16,7 @@ class Config{
 
 
     private function getConfigPath(){
-        return dirname(__FILE__).'/';
+        return __DIR__.'/';
     }
 
 
@@ -27,7 +27,7 @@ class Config{
 
 
     private function setServices(){
-        $this->services = include dirname(__FILE__).'/Services.php';
+        $this->services = include __DIR__.'/Services.php';
     }
 
 

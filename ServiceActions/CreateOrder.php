@@ -1,5 +1,5 @@
 <?php 
-include_once dirname(__FILE__).'/BaseService.php';
+include_once __DIR__.'/BaseService.php';
 
 class CreateOrder extends BaseService {
 

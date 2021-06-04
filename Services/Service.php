@@ -1,6 +1,6 @@
 <?php
 
-include_once dirname(__FILE__).'/XMLReponseParser.php';
+include_once __DIR__.'/XMLReponseParser.php';
 
 class Service {
     private 

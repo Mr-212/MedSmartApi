@@ -1,9 +1,11 @@
 <?php
 include __DIR__.'/../Interfaces/ConsumerCreditReportServiceInterface.php';
+include __DIR__.'/Service.php';
 include __DIR__.'/../ServiceActions/CreateOrder.php';
 include __DIR__.'/../ServiceActions/CreateOrderJoint.php';
 include __DIR__.'/../ServiceActions/RefreshOrder.php';
-include __DIR__.'/Service.php';
+include __DIR__.'/../ServiceActions/RefreshOrderJoint.php';
+
 // include dirname(__FILE__).'/../Constants/ServiceTypeConstants.php';
 
 
@@ -15,7 +17,7 @@ class ConsumerCreditReport extends Service implements ConsumerCreditReportServic
        parent::__construct($coneectionObject);
     }
 
-    public function createOrder($socialSecurityNumber, $firstName, $lastName, $middleName = null, $nameSuffix=null,$addressLine= null, $city=null,$countryCode = null, $stateCode = null, $postalCode =null)
+    public function createOrder($socialSecurityNumber, $firstName, $lastName, $middleName = null, $nameSuffix=null,$addressLine= null, $city=null, $stateCode = null, $postalCode =null,$countryCode = null)
     {
 
         $order = new CreateOrder(static::class);
@@ -88,6 +90,26 @@ class ConsumerCreditReport extends Service implements ConsumerCreditReportServic
 
         $xml = $order->createXmlRequest();  
         return $this->getResponse($xml,'POST');
+    }
+
+
+    public function refreshOrderJoint($orderNo,$socialSecurityNumber, $socialSecurityNumber_2, $firstName, $firstName_2, $lastName, $lastName_2)
+    {
+        $order = new RefreshOrderJoint(static::class);
+
+        $order->orderNumber = $orderNo;
+        $order->socialSecurityNumber = "{$socialSecurityNumber}";
+        $order->socialSecurityNumber_2 = "{$socialSecurityNumber_2}";
+
+        $order->firstName = "{$firstName}";
+        $order->firstName_2 = "{$firstName_2}";
+
+        $order->lastName = "{$lastName}";
+        $order->lastName_2 = "{$lastName_2}";
+
+        $xml = $order->createXmlRequest();  
+        return $this->getResponse($xml,'POST');
+
     }
 
 }

@@ -17,28 +17,12 @@ $xml =
                                 <NAME>
                                     <FirstName>'.$this->firstName.'</FirstName>
                                     <LastName>'.$this->lastName.'</LastName>
-                                    <MiddleName>'.$this->middleName.'</MiddleName>
-                                    <SuffixName>'.$this->nameSuffix.'</SuffixName>
+                                    <MiddleName></MiddleName>
+                                    <SuffixName></SuffixName>
                                 </NAME>
                                 </INDIVIDUAL>
                                 <ROLES>
                                 <ROLE>
-                                    <BORROWER>
-                                        <RESIDENCES>
-                                            <RESIDENCE>
-                                            <ADDRESS>
-                                                <AddressLineText>'.$this->addressLine.'</AddressLineText>
-                                                <CityName>'.$this->city.'</CityName>
-                                                <CountryCode>'.$this->countryCode.'</CountryCode>
-                                                <PostalCode>'.$this->postalCode.'</PostalCode>
-                                                <StateCode>'.$this->stateCode.'</StateCode>
-                                            </ADDRESS>
-                                            <RESIDENCE_DETAIL>
-                                                <BorrowerResidencyType>Current</BorrowerResidencyType>
-                                            </RESIDENCE_DETAIL>
-                                            </RESIDENCE>
-                                        </RESIDENCES>
-                                    </BORROWER>
                                     <ROLE_DETAIL>
                                         <PartyRoleType>Borrower</PartyRoleType>
                                     </ROLE_DETAIL>
@@ -62,22 +46,6 @@ $xml =
                             </INDIVIDUAL>
                             <ROLES>
                             <ROLE>
-                                <BORROWER>
-                                    <RESIDENCES>
-                                        <RESIDENCE>
-                                        <ADDRESS>
-                                            <AddressLineText>'.$this->addressLine_2.'</AddressLineText>
-                                            <CityName>'.$this->city_2.'</CityName>
-                                            <CountryCode>'.$this->countryCode_2.'</CountryCode>
-                                            <PostalCode>'.$this->postalCode_2.'</PostalCode>
-                                            <StateCode>'.$this->stateCode_2.'</StateCode>
-                                        </ADDRESS>
-                                        <RESIDENCE_DETAIL>
-                                            <BorrowerResidencyType>Current</BorrowerResidencyType>
-                                        </RESIDENCE_DETAIL>
-                                        </RESIDENCE>
-                                    </RESIDENCES>
-                                </BORROWER>
                                 <ROLE_DETAIL>
                                     <PartyRoleType>Borrower</PartyRoleType>
                                 </ROLE_DETAIL>

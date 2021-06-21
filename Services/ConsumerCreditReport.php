@@ -33,6 +33,7 @@ class ConsumerCreditReport extends Service implements ConsumerCreditReportServic
         $order->stateCode = "{$stateCode}";
         
         $xml = $order->createXmlRequest();  
+        // var_dump($xml);die();
         return $this->getResponse($xml,'POST');
        
     }

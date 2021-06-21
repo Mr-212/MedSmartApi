@@ -18,12 +18,12 @@ abstract class BaseService {
         $countryCode,
         $socialSecurityNumber,
        
-        $enableExperianReport = false,
-        $enableEquifaxReport = false,
-        $enableTransUnionReport = false,
-        $enablePdfFormat = false,
-        $enableXmlFormat = false,
-        $enableHtmlFormat = false;
+        $enableExperianReport ,
+        $enableEquifaxReport,
+        $enableTransUnionReport,
+        $enablePdfFormat ,
+        $enableXmlFormat ,
+        $enableHtmlFormat ;
 
     public function __construct($productServiceType, $orderType)
     {  
@@ -67,6 +67,7 @@ abstract class BaseService {
 
     private function resolveConfigServices(){
         $configFile = $this->getConfigFile();
+        
 
         if(isset($configFile)){
             if(isset($configFile['services'])){
@@ -75,9 +76,9 @@ abstract class BaseService {
                     $this->enableTransUnionReport = $configFile['services']['TransUnion'];
             }
             if(isset($configFile['responseType'])){
-                    $this->enableXmlFormat    = $configFile['responsesType']['xml'];
-                    $this->enableHtmlFormat   = $configFile['responsesType']['html'];
-                    $this->enablePdfFormat    = $configFile['responsesType']['pdf'];
+                    $this->enableXmlFormat    = $configFile['responseType']['xml'];
+                    $this->enableHtmlFormat   = $configFile['responseType']['html'];
+                    $this->enablePdfFormat    = $configFile['responseType']['pdf'];
             }
         
         }

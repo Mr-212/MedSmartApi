@@ -11,9 +11,9 @@ return array(
        
     ),
 
-    'responsesType' => array (
-        'pdf'  => false,
-        'xml'  => false,
+    'responseType' => array (
+        'pdf'  => true,
+        'xml'  => true,
         'html' => false,
     ),
 

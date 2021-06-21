@@ -1,15 +1,17 @@
 <?php
 
-include_once __DIR__.'/XMLReponseParser.php';
+include __DIR__.'/../Concerns/XML/XMLReponseParser.php';
 
 class Service {
     private 
         $connectionObject,
-        $xmlParser;
+        $xmlParser,
+        $orderObject;
     
-    public function __construct($connection)
+    public function __construct($connection, $orderObject = null)
     {
         $this->connectionObject = $connection;
+        $this->orderObject =  $orderObject;
     }
 
     public function getConnectionObject(){
